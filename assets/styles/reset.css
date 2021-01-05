@@ -5,7 +5,7 @@
     font-size: 1rem;
     color: var(--color-main);
     line-height: 1.5;
-    font-family: sans-serif;
+    font-family: Ubuntu, Helvetica, sans-serif;
     font-weight: 100;
 }
 
@@ -34,11 +34,14 @@ a, button, input, select, textarea {
     outline: none;
 }
 
-button, input[type="submit"] {
-    padding: .5rem 1rem;
+select {
     cursor: pointer;
 }
 
+button, input[type="submit"] {
+    padding: .5rem 1rem;
+
+}
 
 ul,  li {
     list-style: none;

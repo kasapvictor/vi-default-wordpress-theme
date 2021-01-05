@@ -1,6 +1,6 @@
-<!-- form -->
-<div class="post-body">
-	<form name="form-contact" id="form-contact" class="form-contact">
+<!-- wrap form START -->
+<div class="wrap-form">
+	<form name="form-contact" class="form-contact">
 		<!-- name and email -->
 		<div class="form-row">
 			<div class="field-wrap half required">
@@ -75,11 +75,11 @@
 		</div>
 
 		<!-- recaptcha -->
-<!--		<div class="recaptcha g-recaptcha" style="margin-top:25px; margin-bottom: 25px"></div>-->
+		<!-- <div class="recaptcha g-recaptcha" style="margin-top:25px; margin-bottom: 25px"></div> -->
 
 		<!-- submit -->
 		<div class="form-row">
 			<input type="submit" value="Send">
 		</div>
-
 	</form>
+</div> <!-- // wrap-form END -->

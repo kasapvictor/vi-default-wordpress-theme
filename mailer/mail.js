@@ -1,4 +1,4 @@
-const forms = document.querySelectorAll('form');
+const forms = document.querySelectorAll('.form-contact');
 const recaptchaSiteKey = '';
 
 forms.forEach(form => beforeSend(form));

@@ -3,6 +3,9 @@ button, input, select, textarea {
     border-radius: .25rem;
     border: 1px solid var(--color-light);
 }
+button:hover, input:hover, select:hover, textarea:hover {
+    border: 1px solid var(--color-disable);
+}
 
 button:focus, input:focus, select:focus, textarea:focus {
     border: 1px solid var(--color-disable);

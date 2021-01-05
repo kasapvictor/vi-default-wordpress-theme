@@ -47,9 +47,4 @@
 
 <body>
 
-<?php
-print_r(viDate()[3]);
-?>
-
-
 
