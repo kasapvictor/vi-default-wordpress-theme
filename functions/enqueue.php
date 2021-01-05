@@ -15,6 +15,9 @@ function vi_enqueue() {
 	// скрипт темы
 	wp_enqueue_script('vi-script', get_template_directory_uri() . '/assets/scripts/vi.js', ['jquery'], '1.0.0', true);
 
+	// скрипт почты
+	wp_enqueue_script('vi-mail-script', get_template_directory_uri() . '/mailer/mail.js', [], '1.0.0', true);
+
 }
 
 add_action('wp_enqueue_scripts', 'vi_enqueue');

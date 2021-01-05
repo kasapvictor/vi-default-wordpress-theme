@@ -2,7 +2,9 @@
 
 <header>
 	<div class="container">
-		<h1><?php the_title(); ?></h1>
+		<div class="wrap-title">
+			<h1><?php the_title(); ?></h1>
+		</div>
 	</div>
 </header>
 
@@ -11,21 +13,7 @@
 		<section>
 			<div class="wrap-title">
 				<h2>The title</h2>
-				<p>
-					<a href="#">Link </a>
-				</p>
-
-				<input type="text">
-				<input type="checkbox">
-				<input type="radio">
-				<input type="submit">
-				<textarea name="" id="" cols="30" rows="10"></textarea>
-				<select name="" id="">
-					<option value="">1</option>
-					<option value="">1</option>
-					<option value="">1</option>
-					<option value="">1</option>
-				</select>
+				<?php get_template_part( 'template-parts/mail-form' ); ?>
 			</div>
 		</section>
 	</div>

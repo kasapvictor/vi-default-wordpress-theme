@@ -1,7 +1,9 @@
 
 		<footer>
 			<div class="container">
-				<h3>Footer</h3>
+				<div class="wrap-title">
+					<h1><h3>Footer</h3></h1>
+				</div>
 			</div>
 		</footer>
 
