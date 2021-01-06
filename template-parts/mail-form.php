@@ -52,8 +52,8 @@
 		</div>
 
 		<!-- attachments -->
-		<div class="form-row">
-			<div class="field-wrap full">
+		<div class="form-row form-row-files">
+			<div class="field-wrap">
 				<input
 						type='file'
 						id="form-contact-attachments"
@@ -61,13 +61,13 @@
 						multiple>
 			</div>
 			<div class="field-wrap full notices">
-				<span class="form-notice">Maximus size: 5 Mb;</span>
-				<span class="form-notice">Valid types: jpeg | jpg | png | gif | pdf | svg | tiff | ico | bmp | zip </span>
+				<span class="form-notice">Maximus size: 5 Mb</span>
+				<span class="form-notice">Valid types: images , zip </span>
 			</div>
 		</div>
 
 		<!-- agreement -->
-		<div class="form-row" data-form-group="Feel">
+		<div class="form-row">
 			<div class="field-wrap checkbox agreement required">
 				<input type="checkbox" id="agreement" value="agree" name="agreement" required>
 				<label for="agreement">Agree ...</label>

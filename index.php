@@ -14,7 +14,10 @@
 			<div class="wrap-title">
 				<h2>The title</h2>
 
-				<?php get_template_part( 'template-parts/mail-form' ); ?>
+				<aside>
+					<?php get_template_part( 'template-parts/mail-form' ); ?>
+				</aside>
+
 
 			</div>
 		</section>

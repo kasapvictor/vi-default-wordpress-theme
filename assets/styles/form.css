@@ -1,3 +1,64 @@
 .wrap-form {
 
 }
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.field-wrap,
+.field-wrap input,
+.field-wrap select,
+.field-wrap textarea {
+    width: 100%;
+}
+
+.field-wrap.half {
+    width: 48%;
+}
+
+.field-wrap.checkbox,
+.field-wrap.checkbox input{
+    width: auto;
+}
+
+.field-wrap.checkbox label {
+    padding-right: 5px;
+}
+
+.form-row-files {
+    flex-wrap: wrap;
+}
+
+.field-wrap.notices {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #f2f2f2;
+}
+
+.field-wrap.notices span {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 5px;
+    font-size: .8rem;
+}
+
+.form-row input[type="submit"] {
+    min-width: 150px;
+}
+
+.form-row  .agreement {
+    display: flex;
+    align-items: center;
+}
+
+.form-row .agreement label {
+    padding-left: 10px;
+    font-size: .9rem;
+}
+
+.form-row label {
+    cursor: pointer;
+}
