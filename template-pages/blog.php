@@ -24,6 +24,7 @@ get_header();
 				<div class="posts-list">
 					<?php get_template_part( 'template-parts/loop-posts' ); ?>
 				</div>
+
 			</section>
 		</div>
 	</main>
