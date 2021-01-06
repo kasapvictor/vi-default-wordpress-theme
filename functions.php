@@ -32,7 +32,7 @@ require get_template_directory() . '/functions/thumbnails.php';
 /*
  * дамп
  */
-function dd ($data) {
+function d ($data) {
 	echo "<pre>";
 	print_r($data);
 	echo "</pre>";

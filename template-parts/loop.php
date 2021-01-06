@@ -14,14 +14,14 @@ endif;
 
 <!-- pagination -->
 <div class="posts-pagination">
-	<div class="container">
-		<?php
-		$args = [
-			'prev_text' => '&laquo;',
-			'next_text' => '&raquo;',
-			'screen_reader_text' => ' ',
-		];
-		the_posts_pagination( $args );
-		?>
-	</div>
+
+	<?php
+	$args = [
+		'prev_text' => '&laquo;',
+		'next_text' => '&raquo;',
+		'screen_reader_text' => ' ',
+	];
+	the_posts_pagination( $args );
+	?>
+
 </div>

@@ -13,24 +13,17 @@ get_header();
 	</div>
 </header>
 
-<div class="wrap-content-page">
-	<main>
-		<div class="container">
-			<section>
-				<div class="page-content">
-					<?php the_content(); ?>
-				</div>
+<main>
+	<div class="container">
+		<section>
+			<div class="page-content">
+				<?php the_content(); ?>
+			</div>
+		</section>
+	</div>
+	<?php get_template_part( 'template-parts/mail-form' ); ?>
 
-				<div class="posts-list">
-					<?php get_template_part( 'template-parts/loop-posts' ); ?>
-				</div>
-			</section>
-		</div>
-	</main>
+</main>
 
-	<aside>
-		<?php get_template_part( 'template-parts/mail-form' ); ?>
-	</aside>
-</div>
 
 <?php get_footer(); ?>
