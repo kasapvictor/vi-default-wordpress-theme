@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
+    position: relative;
 }
 
 .field-wrap,
@@ -47,6 +48,7 @@
 
 .form-row input[type="submit"] {
     min-width: 150px;
+    cursor: pointer;
 }
 
 .form-row  .agreement {
@@ -61,4 +63,15 @@
 
 .form-row label {
     cursor: pointer;
+}
+
+.form-info-message {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 20px;
+}
+
+.form-info-message div {
+    color: #fff;
 }
