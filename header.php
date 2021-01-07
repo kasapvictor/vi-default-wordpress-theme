@@ -17,9 +17,9 @@
 	}
 
 	switch (true) {
-		case is_front_page() :
+		case is_front_page() && !is_home() :
 			$headTitle = get_bloginfo() . ' - ' . get_bloginfo('description');
-			$metaTitle =  get_bloginfo() . ' - ' . get_the_title();
+			$metaTitle = get_bloginfo() . ' - ' . get_the_title();
 			$metaDescription = get_bloginfo('description');
 			$imgURL = get_template_directory_uri() . "/assets/images/meta.png";
 			$imgType = getTypeImg($imgURL);
@@ -28,11 +28,31 @@
 		case is_category() || is_tag() :
 			//get_queried_object()->term_id
 			$headTitle = get_queried_object()->name . ' - ' . get_queried_object()->description;
-			$metaTitle =  get_bloginfo() . ' - ' . get_queried_object()->name;
+			$metaTitle = get_bloginfo() . ' - ' . get_queried_object()->name;
 			$metaDescription = get_queried_object()->description;
 			$imgURL = get_template_directory_uri() . "/assets/images/meta.png";
 			$imgType = getTypeImg($imgURL);
 			break;
+
+		case is_page_template('template-pages/page.php') || is_page_template('template-pages/blog.php') :
+			$headTitle = get_the_title() . ' - ' . get_the_excerpt();
+			$metaTitle = get_the_title() . ' - ' . get_the_excerpt();
+			$metaDescription = get_the_excerpt();
+			// TODO
+			// сделать мета картинку для 404 страницы
+			$imgURL = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/assets/images/meta.png";
+			$imgType = getTypeImg($imgURL);
+			break;
+
+		case is_404() :
+		$headTitle = '404 -  Страница не найдена!';
+		$metaTitle =  '404 -  Страница не найдена!';
+		$metaDescription = 'Такой страницы не существует';
+		// TODO
+		// сделать мета картинку для 404 страницы
+		$imgURL = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/assets/images/meta.png";
+		$imgType = getTypeImg($imgURL);
+		break;
 
 		default:
 			$headTitle = get_bloginfo() . ' - ' . get_bloginfo('description');
@@ -41,6 +61,13 @@
 			$imgURL = get_template_directory_uri() . "/assets/images/meta.png";
 			$imgType = getTypeImg($imgURL);
 	}
+
+	// is_single() - single post
+	// is_page - default page
+	// is_attachment() - media
+	// is_author() - author page
+	// is_date() -> the_archive_title();
+
 ?>
 <!DOCTYPE html>
 <html lang="<?php bloginfo( 'language' ); ?>">
@@ -71,13 +98,12 @@
 		<link href="<?php echo $templateUrl; ?>/assets/images/256x256w.png" rel="apple-touch-icon">
 	<?php endif; ?>
 
-
 	<title> <?php echo $headTitle; ?> </title>
 
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
+<!--	<link rel="stylesheet" href="--><?php //echo get_stylesheet_uri(); ?><!--" />-->
 
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?> >
 

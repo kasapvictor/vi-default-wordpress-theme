@@ -30,6 +30,11 @@ require get_template_directory() . '/functions/widgets.php';
 require get_template_directory() . '/functions/thumbnails.php';
 
 /*
+ * хуки
+ */
+require get_template_directory() . '/functions/hooks.php';
+
+/*
  * дамп
  */
 function d ($data) {

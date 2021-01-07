@@ -20,6 +20,11 @@ get_header();
 				<?php the_content(); ?>
 			</div>
 		</section>
+
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<p><?php the_title(); ?></p>
+		<div><?php the_content(); ?></div>
+		<?php endwhile; endif; ?>
 	</div>
 	<?php get_template_part( 'template-parts/mail-form' ); ?>
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog
+ * Template Name: 404
  */
 get_header();
 ?>
@@ -8,11 +8,7 @@ get_header();
 <header>
 	<div class="container">
 		<div class="wrap-title">
-			<h1><?php the_title(); ?></h1>
-
-			<div class="wrap-title-description">
-				<?php the_content(); ?>
-			</div>
+			<h1>404</h1>
 		</div>
 	</div>
 </header>
@@ -20,9 +16,10 @@ get_header();
 <main>
 	<div class="container">
 		<section>
-			<div class="posts-list">
-				<?php get_template_part( 'template-parts/loop-posts' ); ?>
+			<div class="content">
+				<p>Страница ошибки 404</p>
 			</div>
+
 		</section>
 	</div>
 </main>
