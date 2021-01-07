@@ -14,13 +14,11 @@ function vi_widgets () {
 	/*
 	 * отключение использования стандартых виджетов
 	 */
-
 	// отключаем виджет категорий
 	unregister_widget('WP_Widget_Categories');
 
 	// отключаем виджет поиска
 	unregister_widget('WP_Widget_Search');
 }
-
 
 add_action('widgets_init', 'vi_widgets');

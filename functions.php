@@ -27,12 +27,17 @@ require get_template_directory() . '/functions/widgets.php';
 /*
  * изображения
  */
-require get_template_directory() . '/functions/thumbnails.php';
+require get_template_directory() . '/functions/add_theme_support.php';
 
 /*
  * хуки
  */
-require get_template_directory() . '/functions/hooks.php';
+require get_template_directory() . '/functions/actions.php';
+
+/*
+ * фильтры
+ */
+require get_template_directory() . '/functions/filters.php';
 
 /*
  * дамп

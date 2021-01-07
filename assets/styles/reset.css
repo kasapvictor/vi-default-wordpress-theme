@@ -40,6 +40,10 @@ textarea {
 
 select {
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
 }
 
 button, input[type="submit"] {

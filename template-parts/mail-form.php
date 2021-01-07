@@ -3,9 +3,9 @@
 	<form name="form-contact" class="form-contact">
 		<!-- name and email -->
 		<div class="form-row">
-			<div class="field-wrap half required">
+			<div class="field-wrap half">
 				<label for="name">Name</label>
-				<input type="text" name="name" id="name" required>
+				<input type="text" name="name" id="name">
 			</div>
 			<div class="field-wrap half required">
 				<label for="email">Email</label>
@@ -54,6 +54,7 @@
 		<!-- attachments -->
 		<div class="form-row form-row-files">
 			<div class="field-wrap">
+				<label for="form-contact-attachments">Добавить файл</label>
 				<input
 						type='file'
 						id="form-contact-attachments"
@@ -70,7 +71,8 @@
 		<div class="form-row">
 			<div class="field-wrap checkbox agreement required">
 				<input type="checkbox" id="agreement" value="agree" name="agreement" required>
-				<label for="agreement">Agree ...</label>
+				<label for="agreement">Я даю согласие на обработку</label>
+				<a href="#" target="_blank">персональных данных</a>
 			</div>
 		</div>
 

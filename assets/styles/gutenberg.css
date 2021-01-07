@@ -1,0 +1,56 @@
+.has-main-background-color { background-color: var(--color-main); }
+
+.has-main-color {  color: var(--color-main); }
+
+.has-mute-background-color { background-color: var(--color-mute); }
+
+.has-mute-color { color: var(--color-mute); }
+
+.has-light-background-color { background-color: var(--color-light); }
+
+.has-light-color { color: var(--color-light); }
+
+.has-disable-background-color { background-color: var(--color-disable); }
+
+.has-disable-color { color: var(--color-disable); }
+
+.has-success-background-color { background-color: var(--color-success); }
+
+.has-success-color { color: var(--color-success); }
+
+.has-error-background-color { background-color: var(--color-error); }
+
+.has-error-color { color: var(--color-error); }
+
+.has-warning-background-color { background-color: var(--color-warning); }
+
+.has-warning-color { color: var(--color-warning); }
+
+.has-link-background-color { background-color: var(--color-link); }
+
+.has-link-color { color: var(--color-link); }
+
+.has-small-font-size { font-size: .8rem; }
+
+.has-regular-font-size { font-size: 1rem; }
+
+.has-large-font-size { font-size: 2rem; }
+
+.has-larger-font-size { font-size: 3rem; }
+
+.wp-block {
+    max-width: 980px;
+}
+
+.wp-block,
+.wp-block textarea,
+.editor-styles-wrapper {
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+
+
+
+

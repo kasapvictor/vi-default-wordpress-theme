@@ -19,11 +19,17 @@ get_header();
 
 <main>
 	<div class="container">
-		<section>
-			<div class="posts-list">
-				<?php get_template_part( 'template-parts/loop-posts' ); ?>
-			</div>
-		</section>
+		<div class="page-content">
+			<section>
+				<div class="posts-list">
+					<?php get_template_part( 'template-parts/loop-posts' ); ?>
+				</div>
+			</section>
+
+			<aside>
+				<?php get_template_part( 'template-parts/mail-form' ); ?>
+			</aside>
+		</div>
 	</div>
 </main>
 

@@ -37,12 +37,12 @@
     margin-top: 10px;
     padding: 10px 20px;
     background: #f2f2f2;
+    border-radius: .25rem;
 }
 
 .field-wrap.notices span {
     display: inline-block;
     width: 100%;
-    padding-bottom: 5px;
     font-size: .8rem;
 }
 
@@ -51,9 +51,19 @@
     cursor: pointer;
 }
 
+.form-row input[type="submit"]:hover {
+    color: #fff;
+    background-color: var(--color-disable);
+}
+
 .form-row  .agreement {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+.agreement a {
+    font-size: .9rem;
 }
 
 .form-row .agreement label {
@@ -75,3 +85,27 @@
 .form-info-message div {
     color: #fff;
 }
+
+.required {
+    position: relative;
+}
+
+.required label:after {
+    content: "*";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--color-error);
+}
+
+/* files */
+input[type="file"] {
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+input[type="file" i]::-webkit-file-upload-button {
+    display: none;
+}
+
+

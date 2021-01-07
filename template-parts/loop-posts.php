@@ -11,8 +11,10 @@
 	if ( $postsQuery->have_posts() ) :
 		while ( $postsQuery->have_posts() ) : $postsQuery->the_post();
 ?>
-	<h2> <?php the_title(); ?> </h2>
-	<p> <?php the_excerpt(); ?> </p>
+		<article class="post-prev">
+			<h2 class="post-prev-title"> <?php the_title(); ?> </h2>
+			<p> <?php the_excerpt(); ?> </p>
+		</article>
 
 	<?php endwhile; ?>
 

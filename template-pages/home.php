@@ -15,18 +15,19 @@ get_header();
 
 <main>
 	<div class="container">
+		<div class="page-content">
 		<section>
-			<div class="page-content">
-				<?php the_content(); ?>
-			</div>
-		</section>
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<p><?php the_title(); ?></p>
-		<div><?php the_content(); ?></div>
-		<?php endwhile; endif; ?>
+			<?php the_content(); ?>
+
+		</section>
+			<aside>
+				<?php get_template_part( 'template-parts/mail-form' ); ?>
+			</aside>
+		</div>
+
 	</div>
-	<?php get_template_part( 'template-parts/mail-form' ); ?>
+
 
 </main>
 

@@ -25,12 +25,6 @@ a, button, input, select, textarea {
     transition: var(--transition-2);
 }
 
-aside {
-    width: 33%;
-    padding: 30px;
-    border: 1px solid var(--color-light);
-}
-
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -41,5 +35,32 @@ aside {
     padding: 2rem 0;
 }
 
+.page-content {
+    display: flex;
+}
+
+.page-content section {
+    width: 70%;
+    padding-right: 3rem;
+}
+
+.page-content aside {
+    width: 30%;
+    padding: 2rem;
+    border: 1px solid var(--color-light);
+    border-radius: .25rem;
+}
+
+.post-prev-title {
+    padding-bottom: 1rem;
+}
+
+.post-prev {
+    padding-bottom: 2rem;
+}
+
+.read-more {
+    font-size: .9rem;
+}
 
 
