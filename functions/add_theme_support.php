@@ -120,9 +120,21 @@ add_theme_support( 'editor-font-sizes', [
 	],
 	[
 		'name'      => 'Regular',
-		'shortName' => 'M',
+		'shortName' => 'R',
 		'size'      => 16,
 		'slug'      => 'regular'
+	],
+	[
+		'name'      => 'Medium',
+		'shortName' => 'M',
+		'size'      => 20,
+		'slug'      => 'medium'
+	],
+	[
+		'name'      => 'Big',
+		'shortName' => 'B',
+		'size'      => 26,
+		'slug'      => 'medium'
 	],
 	[
 		'name'      => 'Large',

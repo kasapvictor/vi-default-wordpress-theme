@@ -39,7 +39,7 @@
 			$metaTitle = get_the_title() . ' - ' . preg_replace('/<a .*/i', '...', get_the_excerpt());
 			$metaDescription = preg_replace('/<a .*/i', '...', get_the_excerpt());
 			// TODO
-			// сделать мета картинку для 404 страницы
+			// сделать мета картинку по умолчанию
 			$imgURL = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/assets/images/meta.png";
 			$imgType = getTypeImg($imgURL);
 			break;
