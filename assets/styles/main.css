@@ -25,6 +25,10 @@ a, button, input, select, textarea {
     transition: var(--transition-2);
 }
 
+.color-text-warning * {
+    color: var(--color-warning);
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;

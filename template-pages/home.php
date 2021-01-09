@@ -7,6 +7,10 @@ get_header();
 
 <header>
 	<div class="container">
+		<!-- top menu START -->
+		<?php get_template_part( 'template-parts/top-menu' ); ?>
+		<!-- top menu END -->
+
 		<div class="wrap-title">
 			<h1><?php the_title(); ?></h1>
 		</div>

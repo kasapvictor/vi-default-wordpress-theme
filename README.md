@@ -1,8 +1,10 @@
----
-Цвета блоков и текста для Gutenberg - `functions/add_theme_support.php` *(line:67)* 
+Тестовые данные - http://wptest.io
 
 ---
-Размер шрифта для Gutenberg - `functions/add_theme_support.php` *(line:114)*
+Цвета блоков и текста для Gutenberg - `functions/add_theme_support.php` *<small>(line:67)</small>* 
+
+---
+Размер шрифта для Gutenberg - `functions/add_theme_support.php` *<small>(line:114)</small>*
 
 ---
 Стили для редактора Gutenberg - `assets/styles/gutenberg.css`

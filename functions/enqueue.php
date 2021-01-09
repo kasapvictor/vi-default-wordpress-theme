@@ -21,3 +21,4 @@ function vi_enqueue() {
 }
 
 add_action('wp_enqueue_scripts', 'vi_enqueue');
+

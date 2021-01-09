@@ -33,3 +33,16 @@ function vi_excerpt_length($length){
 }
 
 add_filter( 'excerpt_length', 'vi_excerpt_length', 999 );
+
+/*
+ * Добавляет type="module" в vi-script.js
+ */
+function vi_script_add_module($tag, $handle, $src) {
+
+	if ( 'vi-script' !== $handle ) return $tag;
+
+	$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+	return $tag;
+}
+
+add_filter('script_loader_tag', 'vi_script_add_module' , 10, 3);
