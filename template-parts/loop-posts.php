@@ -10,10 +10,8 @@
 	if ( $query->have_posts() ) :
 		while ( $query->have_posts() ) : $query->the_post();
 ?>
-		<article class="post-prev">
-			<h2 class="post-prev-title"> <?php the_title(); ?> </h2>
-			<p> <?php the_excerpt(); ?> </p>
-		</article>
+
+			<?php get_template_part( 'template-parts/content-post-preview' ); ?>
 
 	<?php
 		endwhile;

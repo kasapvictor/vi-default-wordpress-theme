@@ -9,7 +9,7 @@ function vi_read_more_links ($excerpt) {
 	$out .= " <a href='";
 	$out .= get_permalink() . "'";
 	$out .= "class='read-more'>";
-	$out .= "Читать далее</a>";
+	$out .= "&nbsp;👉&nbsp;&nbsp;&nbsp;📄</a>";
 	return $out;
 }
 

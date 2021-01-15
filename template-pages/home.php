@@ -17,9 +17,7 @@ get_header();
 			<?php the_content(); ?>
 
 		</section>
-			<aside>
-				<?php get_template_part( 'template-parts/mail-form' ); ?>
-			</aside>
+			<?php get_sidebar(); ?>
 		</div>
 
 	</div>

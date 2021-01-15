@@ -17,8 +17,8 @@ endif;
 
 	<?php
 	$args = [
-		'prev_text' => '&laquo;',
-		'next_text' => '&raquo;',
+		'prev_text' => '👈&nbsp;',
+		'next_text' => '&nbsp;👉',
 		'screen_reader_text' => ' ',
 	];
 	the_posts_pagination( $args );
