@@ -64,6 +64,7 @@ a, button, input, select, textarea {
 }
 
 .read-more {
+    display: inline-block;
     font-size: .9rem;
 }
 

@@ -1,53 +1,48 @@
 <?php
-
-	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	$current = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$args = [
 			'post_type' => 'post',
 			'posts_per_page' => 3,
-			'paged' => $paged
+			'paged' => $current
 		];
-	$postsQuery = new WP_Query( $args );
+	$query = new WP_Query($args);
 
-	if ( $postsQuery->have_posts() ) :
-		while ( $postsQuery->have_posts() ) : $postsQuery->the_post();
+	if ( $query->have_posts() ) :
+		while ( $query->have_posts() ) : $query->the_post();
 ?>
 		<article class="post-prev">
 			<h2 class="post-prev-title"> <?php the_title(); ?> </h2>
 			<p> <?php the_excerpt(); ?> </p>
 		</article>
 
-	<?php endwhile; ?>
-
-		<!-- pagination START -->
-		<div class="pagination">
-			<?php
-			echo paginate_links( array(
-					'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-					'total'        => $postsQuery->max_num_pages,
-					'current'      => max( 1, get_query_var( 'paged' ) ),
-					'format'       => '?paged=%#%',
-					'show_all'     => false,
-					'type'         => 'plain',
-					'end_size'     => 2,
-					'mid_size'     => 1,
-					'prev_next'    => true,
-					'prev_text'    => sprintf( '<i></i> %1$s', __( '&laquo;', 'text-domain' ) ),
-					'next_text'    => sprintf( '%1$s <i></i>', __( '&raquo;', 'text-domain' ) ),
-					'add_args'     => false,
-					'add_fragment' => '',
-			) );
-			?>
-		</div>
-		<!-- pagination END -->
-
-<?php else : ?>
-
-	<p>Постов пока нет</p>
-
-<?php
+	<?php
+		endwhile;
 		/*
 		* Сброс $post
 		*/
 		wp_reset_postdata();
-		endif;
-?>
+		else:
+	?>
+
+	<p>Постов пока нет</p>
+
+<?php endif; ?>
+
+<!-- pagination START -->
+<div class="pagination">
+	<?php
+	$args = [
+			'base'       => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+			'total'   	   => $query->max_num_pages,
+			'current' 	   => $current,
+			'end_size'     => 2,
+			'mid_size'     => 2,
+			'prev_next'    => true,
+			'prev_text'    => '👈&nbsp;',
+			'next_text'    => '&nbsp;👉',
+	];
+
+	echo wp_kses_post( paginate_links($args) );
+	?>
+</div>
+<!-- pagination END -->

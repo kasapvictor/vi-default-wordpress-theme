@@ -19,10 +19,10 @@ add_filter('get_the_excerpt', 'vi_read_more_links', 10);
  * Запуск функции перед выводом отрывка поста
  * меняет в конце отрывка [...] на ...
  */
-function vi_new_excerpt ($excerpt) {
-	return str_replace(['[', ']'], ' ', $excerpt);
+function vi_excerpt ($excerpt) {
+	return str_replace(['[', ']'], '', $excerpt);
 }
-add_filter('get_the_excerpt', 'vi_new_excerpt', 10);
+add_filter('get_the_excerpt', 'vi_excerpt', 10);
 
 /*
  * Запуск функции перед выводом отрывка поста

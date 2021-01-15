@@ -5,13 +5,9 @@
 get_header();
 ?>
 
-<header>
-	<div class="container">
-		<div class="wrap-title">
-			<h1><?php the_title(); ?></h1>
-		</div>
-	</div>
-</header>
+<!-- header START -->
+<?php get_template_part( 'template-parts/header' ); ?>
+<!-- header END -->
 
 <main>
 	<div class="container">
@@ -19,7 +15,6 @@ get_header();
 			<div class="content">
 				<?php the_content(); ?>
 			</div>
-
 		</section>
 	</div>
 </main>

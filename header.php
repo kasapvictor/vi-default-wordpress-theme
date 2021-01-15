@@ -35,9 +35,10 @@
 			break;
 
 		case is_page_template('template-pages/page.php') || is_page_template('template-pages/blog.php') :
-			$headTitle = get_the_title() . ' - ' . preg_replace('/<a .*/i', '...', get_the_excerpt());
-			$metaTitle = get_the_title() . ' - ' . preg_replace('/<a .*/i', '...', get_the_excerpt());
-			$metaDescription = preg_replace('/<a .*/i', '...', get_the_excerpt());
+			// удалеем в title и meta из отрывка ссылку "читать далее"
+			$headTitle = get_the_title() . ' - ' . preg_replace('/<a .*/i', ' ', get_the_excerpt());
+			$metaTitle = get_the_title() . ' - ' . preg_replace('/<a .*/i', ' ', get_the_excerpt());
+			$metaDescription = preg_replace('/<a .*/i', ' ', get_the_excerpt());
 			// TODO
 			// сделать мета картинку по умолчанию
 			$imgURL = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/assets/images/meta.png";

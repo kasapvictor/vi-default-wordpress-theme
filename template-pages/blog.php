@@ -5,17 +5,9 @@
 get_header();
 ?>
 
-<header>
-	<div class="container">
-		<div class="wrap-title">
-			<h1><?php the_title(); ?></h1>
-
-			<div class="wrap-title-description">
-				<?php the_content(); ?>
-			</div>
-		</div>
-	</div>
-</header>
+<!-- header START -->
+<?php get_template_part( 'template-parts/header' ); ?>
+<!-- header END -->
 
 <main>
 	<div class="container">
