@@ -89,7 +89,7 @@
 
 	<?php  if (viDate()[3] < 18) : ?>
 		<link href="<?php echo $templateUrl; ?>/assets/images/32x32d.png" rel="shortcut icon" type="image/x-icon">
-		<link href="<?php echo $templateUrl; ?>>/assets/images/256x256d.png" rel="apple-touch-icon">
+		<link href="<?php echo $templateUrl; ?>/assets/images/256x256d.png" rel="apple-touch-icon">
 	<?php else : ?>
 		<link href="<?php echo $templateUrl; ?>/assets/images/32x32w.png" rel="shortcut icon" type="image/x-icon">
 		<link href="<?php echo $templateUrl; ?>/assets/images/256x256w.png" rel="apple-touch-icon">
